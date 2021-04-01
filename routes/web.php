@@ -7,6 +7,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']],function() {
     Route::get('/','TimeController@index');
+    Route::get('/posts','PostController@index');
     Route::post('/posts','PostController@create');
 
     Route::get('/users/{user}', 'UserController@index')->name('users');
