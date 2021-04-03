@@ -2,25 +2,16 @@ import React,{useState,useEffect} from "react";
 import axios from 'axios'
 import Echo from "laravel-echo";
 
-const aa = () => {
+const App = () => {
   const [body,setBody] = useState('')
   const [posts,setPosts] = useState([])
   const [loading,setLoading] = useState(false)
 
-  // window.Pusher = require('new-post');
-
-  // window.Echo = new Echo({
-  //   broadcaster: 'new-post',
-  //   key: 'your-pusher-channels-key'
-  // })
-
-  // useEffect(() => {
-  //   Echo.private('new-post').listen('PostCreated',e => {
-  //     // if (window.Laravel.user.following.includes(e.post.user_id)) {
-  //     //   setPosts({posts: [e.post, ...posts]})
-  //     // }
-  //     console.log('hello');
-  //   })
+  // window.Echo.private('new-post').listen('PostCreated',e => {
+  //   if (window.Laravel.user.following.includes(e.post.user_id)) {
+  //     setPosts([e.post, ...posts])
+  //   }
+  //   console.log('hello');
   // })
 
   function handleSubmit(e) {
@@ -55,7 +46,7 @@ const aa = () => {
                 <a href={`/users/${pos.user.username}`} >
                   <b>{pos.user.username}</b>
                 </a>{''}
-                {/* - {pos.humanCreatedAt} */}
+                - {pos.created_at}
               </div>
               <p>{pos.body}</p>
             </div>
@@ -70,7 +61,7 @@ return (
       <div className="row justify-content-center">
           <div className="col-md-6">
               <div className="card">
-                  <div className="card-header">Tweet something..</div>
+                  <div className="card-header">ツイート</div>
 
                   <div className="card-body">
                       <form onSubmit={handleSubmit}>
@@ -81,11 +72,11 @@ return (
                             className="form-control"
                             rows="5"
                             maxLength="140"
-                            placeholder="Whats up?"
+                            placeholder="Let's write something"
                             required
                           />
                         </div>
-                        <input type="submit" value="Post" className="form-control" />
+                        <input type="submit" value="送信" className="form-control" />
                       </form>
                   </div>
               </div>
@@ -105,4 +96,4 @@ return (
   )
 }
 
-export default aa;
+export default App;

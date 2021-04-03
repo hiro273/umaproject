@@ -7,6 +7,10 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']],function() {
     Route::get('/','TimeController@index');
+    Route::get('/helper','TimeController@index');
+    Route::get('/uma','TimeController@index');
+    Route::get('/article','TimeController@index');
+    Route::get('/uma/{name}','TimeController@index');
     Route::get('/posts','PostController@index');
     Route::post('/posts','PostController@create');
 

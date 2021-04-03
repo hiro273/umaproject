@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
     <script>
         window.Laravel = <?php echo json_encode([
@@ -25,7 +25,7 @@
             'user' => [
                 'id' => Auth::check() ? Auth::user()->id : null,
                 'following' => Auth::check() ? Auth::user()->following()->pluck('users.id') : null
-            ]
+            ],
         ]);
         ?>
     </script>
