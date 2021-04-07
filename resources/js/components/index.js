@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './Home/Navbar'
 import Helper from './Home/Helper'
 import App from './Home/App'
-import Uma from './Home/Uma'
+import Uma from './umaArticle/Uma'
 import Article from './Home/Article'
 
 function Index() {
