@@ -18,3 +18,6 @@ Route::group(['middleware' => ['auth']],function() {
     Route::get('/users/{user}/follow', 'UserController@follow')->name('users.follow');
     Route::get('/users/{user}/unfollow', 'UserController@unfollow')->name('users.unfollow');
 });
+
+Route::resource('bbs', 'ArticlePostsController', ['only' => ['index', 'show','create','store','edit','update','destroy']]);
+Route::resource('comment', 'CommentsController', ['only' => ['store']]);

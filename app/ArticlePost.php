@@ -6,11 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArticlePost extends Model
 {
-    public function comments() {
+    protected $fillable = [
+        'name',
+        'subject',
+        'message', 
+        'category_id'
+    ];
+    
+    public function comments()
+    {
         return $this->hasMany('App\Comment');
     }
-
-    public function category() {
+ 
+    public function category()
+    {
         return $this->belongsTo('App\Category');
     }
 }

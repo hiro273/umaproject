@@ -10,8 +10,8 @@ $factory->define(ArticlePost::class, function (Faker $faker) {
         'created_at' => $faker->date('Y-m-d H:i:s', 'now'),
         'updated_at' => $faker->date('Y-m-d H:i:s', 'now'),
         'subject' => $faker->realText(16),
-        'message' => $faker->realText(200), 
+        'message' => $faker->realText(200),
         'name' => $faker->name,
-        'category_id' => $faker->numberBetween(1,5),
+        'category_id' => $faker->numberBetween(1,5), 
     ];
 });
