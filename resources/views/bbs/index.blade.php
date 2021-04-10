@@ -1,12 +1,12 @@
 @extends('layouts.bbslayout')
  
-@section('title', 'LaravelPjt BBS 投稿の一覧ページ')
+@section('title', 'ウマ娘攻略')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿一覧ページの説明文')
 @section('pageCss')
 <link href="/css/bbs/style.css" rel="stylesheet">
 @endsection
- 
+
 @include('layouts.bbsheader')
  
 @section('content')
@@ -21,6 +21,15 @@
       {{ session('poststatus') }}
   </div>
   @endif
+
+  <div class="mt-4 mb-4">
+    <form class="form-inline" method="GET" action="{{ route('bbs.index') }}">
+        <div class="form-group">
+            <input type="text" name="searchword" value="{{$searchword}}" class="form-control" placeholder="名前を入力してください">
+        </div>
+        <input type="submit" value="検索" class="btn btn-info ml-2">
+    </form>
+  </div>
 
   <div class="mt-4 mb-4">
     <p>{{ $posts->total() }}件が見つかりました。</p>
@@ -58,7 +67,9 @@
               </td>
               <td class="text-nowrap">
                 <p><a href="{{ action('ArticlePostsController@show', $post->id) }}" class="btn btn-primary btn-sm">詳細</a></p>
+
                 <p><a href="{{ action('ArticlePostsController@edit', $post->id) }}" class="btn btn-info btn-sm">編集</a></p>
+
                 <p>
                   <form method="POST" action="{{ action('ArticlePostsController@destroy', $post->id) }}">
                         @csrf
@@ -72,9 +83,10 @@
       </tbody>
   </table>
   <div class="d-flex justify-content-center mb-5">
-    {{ $posts->appends(['category_id' => $category_id])->links() }}
+    {{ $posts->appends([
+      'category_id' => $category_id,
+      'searchword' => $searchword,
+    ])->links() }}
   </div>
 </div>
 @endsection
- 
-@include('layouts.bbsfooter')

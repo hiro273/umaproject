@@ -76210,27 +76210,6 @@ var App = function App() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Home/Article.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Home/Article.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var Article = function Article() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u8A18\u4E8B\u3067\u3059");
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Article);
-
-/***/ }),
-
 /***/ "./resources/js/components/Home/Helper.js":
 /*!************************************************!*\
   !*** ./resources/js/components/Home/Helper.js ***!
@@ -76245,7 +76224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Helper = function Helper() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, "\u30ED\u30B0\u30A4\u30F3\u3059\u308B\u3068", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u8A18\u4E8B\u63B2\u793A\u677F\u3078\u66F8\u304D\u8FBC\u307F", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u30D5\u30A9\u30ED\u30EF\u30FC\u3068\u30C1\u30E3\u30C3\u30C8 \u304C\u5229\u7528\u3067\u304D\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, "\u30FB\u30A6\u30DE\u5A18\u4E00\u89A7\u3067\u30AD\u30E3\u30E9\u306E\u7D39\u4ECB\u30DA\u30FC\u30B8\u304C\u898B\u308C\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u653B\u7565\u8A18\u4E8B\u306F\u5C0F\u30CD\u30BF\u306A\u3069\u8A18\u4E8B\u3092\u4F5C\u6210\u95B2\u89A7\u3067\u304D\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u30D5\u30A9\u30ED\u30EF\u30FC\u30C1\u30E3\u30C3\u30C8\u3067\u306F\u30D5\u30A9\u30ED\u30EF\u30FC\u3068\u30EA\u30A2\u30EB\u30BF\u30A4\u30E0\u30C8\u30FC\u30AF\u304C\u3067\u304D\u307E\u3059 \u203B\u73FE\u57281\u5BFE1\u3092\u60F3\u5B9A\u3057\u3066\u3044\u307E\u3059")));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, "\u30ED\u30B0\u30A4\u30F3\u3059\u308B\u3068", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u30A6\u30DE\u5A18\u4E00\u89A7\u304C\u898B\u308C\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u30D5\u30A9\u30ED\u30EF\u30FC\u30C1\u30E3\u30C3\u30C8 \u304C\u5229\u7528\u3067\u304D\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, "\u30FB\u30A6\u30DE\u5A18\u4E00\u89A7\u3067\u30AD\u30E3\u30E9\u306E\u7D39\u4ECB\u30DA\u30FC\u30B8\u304C\u898B\u308C\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u653B\u7565\u8A18\u4E8B\u306F\u5C0F\u30CD\u30BF\u306A\u3069\u8A18\u4E8B\u3092\u4F5C\u6210\u95B2\u89A7\u3067\u304D\u307E\u3059", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u30FB\u30D5\u30A9\u30ED\u30EF\u30FC\u30C1\u30E3\u30C3\u30C8\u3067\u306F\u30D5\u30A9\u30ED\u30EF\u30FC\u3068\u30EA\u30A2\u30EB\u30BF\u30A4\u30E0\u30C8\u30FC\u30AF\u304C\u3067\u304D\u307E\u3059 \u203B\u73FE\u57281\u5BFE1\u3092\u60F3\u5B9A\u3057\u3066\u3044\u307E\u3059")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Helper);
@@ -76276,8 +76255,6 @@ var Navbar = function Navbar() {
   }, "\u3053\u306E\u30B5\u30A4\u30C8\u306E\u4F7F\u3044\u65B9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/uma"
   }, "\u30A6\u30DE\u5A18\u4E00\u89A7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/article"
-  }, "\u653B\u7565\u8A18\u4E8B\u4E00\u89A7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"
   }, "\u30D5\u30A9\u30ED\u30EF\u30FC\u30C1\u30E3\u30C3\u30C8"));
 };
@@ -76408,8 +76385,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_Helper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home/Helper */ "./resources/js/components/Home/Helper.js");
 /* harmony import */ var _Home_App__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Home/App */ "./resources/js/components/Home/App.js");
 /* harmony import */ var _umaArticle_Uma__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./umaArticle/Uma */ "./resources/js/components/umaArticle/Uma.js");
-/* harmony import */ var _Home_Article__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Home/Article */ "./resources/js/components/Home/Article.js");
-
 
 
 
@@ -76429,9 +76404,6 @@ function Index() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/helper",
     component: _Home_Helper__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    path: "/article",
-    component: _Home_Article__WEBPACK_IMPORTED_MODULE_7__["default"]
   }))));
 }
 

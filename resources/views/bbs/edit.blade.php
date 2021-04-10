@@ -1,6 +1,6 @@
 @extends('layouts.bbslayout')
  
-@section('title', 'LaravelPjt BBS 投稿ページ')
+@section('title', 'ウマ娘攻略')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿ページの説明文')
 @section('pageCss')
@@ -16,9 +16,9 @@
             投稿の編集
         </h1>
  
-        <form method="POST" action="{{ route('bbs.store') }}">
+        <form method="POST" action="{{ route('bbs.update','$post->id') }}">
             @csrf
- 
+            @method('PUT')
             <fieldset class="mb-4">
  
                 <div class="form-group">
@@ -29,7 +29,7 @@
                         id="name"
                         name="name"
                         class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
-                        value="{{ old('name') }}"
+                        value="{{ old('name') ?: $post->name }}"
                         type="text"
                     >
                     @if ($errors->has('name'))
@@ -47,6 +47,8 @@
                       id="category_id"
                       name="category_id"
                       class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
+                      value="{{ old('category_id') ?: $post->category_id }}"
+                      type="text"
                     >
                       @foreach($categories as $id => $name)
                           <option value="{{ $id }}" 
@@ -56,13 +58,6 @@
                           >{{ $name }}</option>
                       @endforeach
                     </select>
-                    <input
-                        id="category_id"
-                        name="category_id"
-                        class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
-                        value="{{ old('category_id') }}"
-                        type="text"
-                    >
                     @if ($errors->has('category_id'))
                         <div class="invalid-feedback">
                             {{ $errors->first('category_id') }}
@@ -78,7 +73,7 @@
                         id="subject"
                         name="subject"
                         class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
-                        value="{{ old('subject') }}"
+                        value="{{ old('subject') ?: $post->subject }}"
                         type="text"
                     >
                     @if ($errors->has('subject'))
@@ -98,7 +93,7 @@
                         name="message"
                         class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
                         rows="4"
-                    >{{ old('message') }}</textarea>
+                    >{{ old('message') ?: $post->message }}</textarea>
                     @if ($errors->has('message'))
                         <div class="invalid-feedback">
                             {{ $errors->first('message') }}
@@ -107,7 +102,7 @@
                 </div>
  
                 <div class="mt-5">
-                    <a class="btn btn-secondary" href="{{ route('bbs.index') }}">
+                    <a class="btn btn-secondary" href="{{ route('bbs.show', $post->id) }}">
                         キャンセル
                     </a>
  
@@ -121,4 +116,3 @@
 </div>
 @endsection
  
-@include('layouts.bbsfooter')

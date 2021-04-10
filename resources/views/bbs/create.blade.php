@@ -1,6 +1,6 @@
 @extends('layouts.bbslayout')
  
-@section('title', 'LaravelPjt BBS 投稿ページ')
+@section('title', 'ウマ娘攻略')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿ページの説明文')
 @section('pageCss')
@@ -53,13 +53,6 @@
                             <option value="{{ $id }}">{{ $name }}</option>
                         @endforeach
                     </select>
-                    <input
-                        id="category_id"
-                        name="category_id"
-                        class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
-                        value="{{ old('category_id') }}"
-                        type="text"
-                    >
                     @if ($errors->has('category_id'))
                         <div class="invalid-feedback">
                             {{ $errors->first('category_id') }}
@@ -117,5 +110,3 @@
     </div>
 </div>
 @endsection
- 
-@include('layouts.bbsfooter')

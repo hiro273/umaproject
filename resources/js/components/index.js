@@ -6,7 +6,6 @@ import NavBar from './Home/Navbar'
 import Helper from './Home/Helper'
 import App from './Home/App'
 import Uma from './umaArticle/Uma'
-import Article from './Home/Article'
 
 function Index() {
   return (
@@ -17,7 +16,6 @@ function Index() {
               <Route exact path="/" component={App} />
               <Route path="/uma" component={Uma} />
               <Route path="/helper" component={Helper} />
-              <Route path="/article" component={Article} />
           </Switch>
       </div>
   </Router>

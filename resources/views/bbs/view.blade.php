@@ -1,6 +1,6 @@
 @extends('layouts.bbslayout')
 
-@section('title', 'LaravelPjt BBS 投稿編集ページ')
+@section('title', 'ウマ娘攻略')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿編集ページの説明文')
 @section('pageCss')
@@ -109,4 +109,3 @@
 </div>
 @endsection
  
-@include('layouts.bbsfooter')

@@ -11,7 +11,7 @@ class CommentsController extends Controller
     public function store(CommentRequest $request)
     {
         $savedata = [
-            'post_id' => $request->post_id,
+            'article_post_id' => $request->article_post_id,
             'name' => $request->name,
             'comment' => $request->comment,
         ];
@@ -19,6 +19,6 @@ class CommentsController extends Controller
         $comment = new Comment;
         $comment->fill($savedata)->save();
  
-        return redirect()->route('bbs.show', [$savedata['post_id']])->with('commentstatus','コメントを投稿しました');
+        return redirect()->route('bbs.show', [$savedata['article_post_id']])->with('commentstatus','コメントを投稿しました');
     }
 }

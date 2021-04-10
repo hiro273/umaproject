@@ -1,6 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<div id="body">
+    <div id="grad">
+        <div id="header">
+            <div>Site<span>Random</span></div>
+        </div>
+        <br>
+        <div id="login">
+            <input type="text" placeholder="username" name="user"><br>
+            <input type="password" placeholder="password" name="password">
+            <input type="button" value="Login">
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

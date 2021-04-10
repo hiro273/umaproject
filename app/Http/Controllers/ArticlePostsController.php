@@ -12,18 +12,25 @@ class ArticlePostsController extends Controller
     // カテゴリ取得
         $category = new Category;
         $categories = $category->getLists();
+        $searchword = $request->searchword;
     
         $category_id = $request->category_id;
-        if (!is_null($category_id)) {
+        if (!empty($category_id)) {
             $posts = ArticlePost::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
         } else {
-            $posts = ArticlePost::orderBy('created_at', 'desc')->paginate(10);
+            $posts = ArticlePost::with(['comments', 'category'])
+            ->orderBy('created_at', 'desc')
+            ->categoryAt($category_id)
+            ->fuzzyNameMessage($searchword)
+            ->paginate(10);
         }
+
     
         return view('bbs.index', [
             'posts' => $posts,
             'categories' => $categories,
             'category_id' => $category_id,
+            'searchword' => $searchword
         ]);
     }
 
@@ -55,11 +62,11 @@ class ArticlePostsController extends Controller
         return redirect('/bbs')->with('poststatus', '新規投稿しました');
     }
 
-    public function edit($post_id) {
+    public function edit($id) {
         $category = new Category;
         $categories = $category->getLists();
 
-        $post = ArticlePost::findOrFail($post_id);
+        $post = ArticlePost::findOrFail($id);
         return view('bbs.edit', ['post' => $post, 'categories' => $categories]);
     }
 

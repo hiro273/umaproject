@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Article = () => {
+const Bbs = () => {
   return (
     <div>
-      記事です
+      fs
     </div>
   )
 }
 
-export default Article
+export default Bbs
