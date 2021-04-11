@@ -7,6 +7,135 @@
   margin-right: 15%;
 } */
 
+/*login css  */
+#body{
+  font-family: Arial;
+  font-size: 12px;
+  background: linear-gradient(-45deg, rgba(46, 223, 220, 0.9), rgba(230, 34, 158, 0.9)) fixed,
+  url(../img/Form/BackHome.png);
+  background-size:cover;
+  width:100%;
+  height: 660px;
+}
+#bodys{
+  font-family: Arial;
+  font-size: 12px;
+  background: linear-gradient(-45deg, rgba(172, 33, 33, 0.9), rgba(50, 167, 245, 0.9)) fixed,
+  url(../img/Form/BackHome2.png);
+  background-size:cover;
+  width:100%;
+  height: 660px;
+}
+
+#gra{
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+#header{
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 275px);
+  z-index: 2;
+}
+
+#header div{
+  float: left;
+  color: rgb(167, 25, 25);
+  font-family: 'Exo', sans-serif;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+#header div span{
+  color: #5379fa !important;
+}
+
+#login{
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 50px);
+  height: 150px;
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+#login input[type=text]{
+  width: 250px;
+  height: 35px;
+  background: transparent;
+  border: 3px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: rgb(216, 212, 212);
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 6px;
+}
+#login input[type=text]:focus {
+  background-color: rgb(63, 60, 60);
+}
+
+#login input[type=email],
+#login input[type=password]
+{
+  width: 250px;
+  height: 35px;
+  background: transparent;
+  border: 3px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: rgb(208, 200, 200);
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+#login input[type=email]:focus,
+#login input[type=password]:focus {
+  background-color: rgb(63, 60, 60);
+}
+
+
+#Button {
+  width: 250px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #a18d6c;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+#Button:hover{
+  opacity: 0.8;
+}
+
+#Button:active{
+  opacity: 0.6;
+}
+#Button:focus{
+  outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
 #ul-flex {
   display: flex;
   list-style: none;
@@ -3371,7 +3500,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #3490dc;
+  color: #f00c1b;
   text-decoration: none;
 }
 
