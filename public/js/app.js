@@ -76129,6 +76129,14 @@ var App = function App() {
   // })
 
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.Echo["private"]('new-post').listen('PostCreated', function (e) {
+      if (window.Laravel.user.following.includes(e.post.user_id)) {
+        setPosts([e.post].concat(_toConsumableArray(posts)));
+      }
+    });
+  }, []);
+
   function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);

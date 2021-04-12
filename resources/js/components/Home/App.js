@@ -14,6 +14,14 @@ const App = () => {
   //   console.log('hello');
   // })
 
+  useEffect(() => {
+    window.Echo.private('new-post').listen('PostCreated', e => {
+      if (window.Laravel.user.following.includes(e.post.user_id)) {
+        setPosts([e.post, ...posts])
+      }
+    })
+  }, [])
+
   function handleSubmit(e) {
     e.preventDefault();
     setLoading(true)
